@@ -13,3 +13,5 @@ Simply add the endpoint by including the URL pattern definitions:
         url(r'^.well-known/acme-challenge/', include('django_acme.urls')),
         …
     ]
+
+**NOTICE**: You shouldn't be using this with Django, but with your web server.
