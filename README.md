@@ -1,12 +1,12 @@
 Just a tiny view that exposes `ACME_CHALLENGE*` environment variables.
 
-The environment is read at view construction. Multiple ACME challenges can be
-declared:
+Multiple ACME challenges can be declared:
 
     export ACME_CHALLENGE_0="foo_token.foo_secret"
     export ACME_CHALLENGE_C="bar_token.bar_secret"
 
-Simply add the endpoint by including the URL pattern definitions:
+The environment is read at view construction time, when you add the enpoint by
+including the URL definitions:
 
     urlpatterns = [
         …
@@ -14,4 +14,4 @@ Simply add the endpoint by including the URL pattern definitions:
         …
     ]
 
-**NOTICE**: You shouldn't be using this with Django, but with your web server.
+**WARNING**: You shouldn't be doing this with Django, but with your web server.
